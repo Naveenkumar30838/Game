@@ -1,0 +1,220 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    /* background-color: #212121; */
+    position: relative;
+}
+
+.box{
+    width: 50px;
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+.button{
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+  
+    position: absolute;
+    left: 300px;
+    top: 10px;
+    font-size: 1.5rem;
+    
+    /* background-color: white; */
+
+}
+.button-2{
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+  
+    position: absolute;
+    left: 350px;
+    top: 10px;
+    font-size: 1.5rem;
+    
+    /* background-color: white; */
+
+}
+.ball{
+    
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-image: url(ball-removebg-preview.png);
+    background-position: center;
+    background-size: 50px;
+    
+  
+}
+.ball:hover{
+    transform: rotateZ(360deg) ;
+
+    transition: all ease-in-out;
+    cursor: pointer;
+    cursor: zoom-in;
+    background-image: url(download-removebg-preview.png);
+    transition-duration: 3s;
+    background-size: 50px;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50pxpx;
+    
+}
+
+
+.forward{
+    transition: 1s ease-in-out;
+    animation-direction: alternate;
+    animation: play;
+    animation-duration:10s;
+}
+.up-down{
+    animation-direction:alternate;
+    animation: jump;
+    animation-duration:8s;
+    animation-iteration-count: infinite;
+}
+.line{
+    width: 150px;
+    /* border: 2px solid white; */
+    border-radius: 2px;
+}
+.line1{
+    position: absolute;
+    top: 100px;
+    left: 90px;
+}
+.line2{
+    width: 0px;
+    height: 150px;
+    position: absolute;
+    top: 100px;
+    left: 240px;
+}
+.line3{
+    position: absolute;
+    top: 250px;
+    left: 240px;
+}
+.line4{
+    width: 0px;
+    height: 150px;
+    position: absolute;
+    top: 250px;
+    left: 390px; 
+}
+.line5{
+    position: absolute;
+    top: 400px;
+    left: 390px;
+}
+.line6{
+    /* border: 2px solid red;   */
+    width: 0px;
+    height: 150px;
+    position: absolute;
+    top: 400px;
+    left: 540px;   
+}
+.line7{
+    position: absolute;
+    top: 550px;
+    left: 540px;   
+}
+.line8{
+    width: 0px;
+    height: 150px;
+    position: absolute;
+    top: 400px;
+    left: 690px;  
+}
+@keyframes play{
+    0%{
+        top: 100px;
+        left: 90px;
+    }
+    11%{
+        top: 100px;
+        left: 240px;
+        transform: rotate(360deg);
+    }
+    22%{
+        top: 250px;
+        left: 240px;
+        transform: rotate(-360deg);
+    }
+    35%{
+        top: 250px;
+        left: 390px;
+        transform: rotate(360deg); 
+    }
+    46%{
+        top: 400px;
+        left: 390px;
+        transform: rotate(-360deg);
+        
+    }
+    58%{
+        
+    top: 400px;
+    left: 540px;
+    transform: rotate(360deg);
+    }
+    70%{
+        top: 550px;
+        left: 540px; 
+        transform: rotate(-360deg);  
+    }
+    82%{
+        top: 550px;
+        left: 690px;
+        transform: rotate(360deg);  
+    }
+    93%{
+        top: 400px;
+        left: 690px;
+        transform: rotate(-360deg);  
+    }
+    100%{
+        top: 400px;
+        left: 100vw;
+        transform: rotate(360deg);
+    }
+}
+@keyframes jump{
+    0%{
+        transform: translateY(0vh) translateX(0px);
+        
+    }
+   10% {
+        transform: translateY(99vh) translateX(200px);
+    }
+    40%{
+        transform: translateY(0vh) translateX(400px);
+    }
+    50%{
+        transform: translateY(1vh) translateX(450px);
+
+    }
+    60% {
+        transform: translateY(10vh) translateX(500px);
+
+    }
+    90%{
+        transform: translateY(0vh) translateX(700px);
+
+    }
+    100%{
+        transform: translateY(100vh) translateX(900px);
+
+    }
+}
